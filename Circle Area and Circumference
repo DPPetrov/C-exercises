@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+ int main(int argc, char const *argv[])
+{
+    const double PI = 3.14;
+
+    double radius;
+
+    double circumference;
+
+    double area = pow(radius, 2)* PI;
+
+    printf("\nEnter the radius of a circle ");
+    scanf("%lf", &radius);
+
+    circumference = 2 * PI * radius;
+   
+
+    printf("%lf\n", circumference);
+    printf("%lf", area);
+
+    return 0;
+}
