@@ -1,17 +1,17 @@
-#include <stdio.h>
-#include <math.h>
+#include <stdio.h> //tandard input/output header
+#include <math.h> //math header for useful functions
 
 
 int main()
 {
-    double a, b, c;
+    double a, b, c; //input for variables a && b will be from the console
 
     printf("Enter side A ");
     scanf("%lf", &a);
     printf("\nEnter side B ");
     scanf("%lf", &b);
 
-    c = sqrt(a * a + b * b);
+    c = sqrt(a * a + b * b); // c calculates the square root of the sides
 
     printf("Result is: %.2f\n", c);
     
