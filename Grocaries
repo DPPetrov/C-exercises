@@ -21,14 +21,14 @@ int main()
 
 		scanf_s("%d", &choice);
 
-		printf("\nPlease select quantity: ");
+		
 		
 
 
 		switch (choice)
 		{
 		case 1:
-
+			printf("\nPlease select quantity: ");
 			
 			scanf_s("%lf", &quantity);
 			sum += tomatos * quantity;
@@ -36,7 +36,7 @@ int main()
 			break;
 
 		case 2:
-
+			printf("\nPlease select quantity: ");
 			
 			scanf_s("%lf", &quantity);
 			sum += flour * quantity;
@@ -67,8 +67,12 @@ int main()
 
 		default:
 			printf("Invalid product. This program will now selfdestruct!");
-			break;
+			return;
+			
 
+		}
+		if (purchaseCommand != 1 && purchaseCommand != 0) {
+			return;
 		}
 		printf("\nWould you like to make another purchase? (1) Yes, (0) No");
 
