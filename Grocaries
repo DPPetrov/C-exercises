@@ -93,7 +93,7 @@ int main()
 		if (purchaseCommand != 1 && purchaseCommand != 0) {
 			return;
 		}
-		printf("\nWould you like to make another purchase? (1) Yes, (0) No");
+		printf("\nWould you like to make another purchase? (1) Yes, (0) No ");
 
 		scanf_s("%d", &purchaseCommand);
 
