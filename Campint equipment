@@ -1,0 +1,97 @@
+
+
+#include <stdio.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <climits>
+#include <math.h>
+#include <string.h>
+
+int priceCaravan = 90;
+int priceCamper = 100;
+short caravanCount = 3;
+short camperCount = 3;
+int sum = 0;
+
+
+
+
+int main()
+{
+    printf("\nPlease select camp type Caravan (1) or Camper (2) ");
+    
+    int type = 0;
+
+    scanf_s("%d", &type);
+
+    //priceCalculation(type);
+    
+    switch (type) //while loop optional
+    {
+    case 1:
+        sum += priceCaravan;
+        caravanCount--;
+        printf("\nOwed sum %d. Caravans left %d", sum, caravanCount);
+
+        if (caravanCount == 0) {
+
+        printf("\nOut of stock");
+        break;
+    }
+        break;
+
+    case 2:
+        sum += priceCamper;
+        camperCount--;
+        printf("\nOwed sum %d. Campers left %d", sum, camperCount);
+
+        if (camperCount == 0) {
+
+            printf("\nOut of stock");
+            break;
+        }
+
+        break;
+    default:
+        printf("\nPlease select a valid input");
+        
+        break;
+    }
+    
+    //printf("Would you like to make another purchase? 1 - Yes, 2 - No");
+    // int selection = 0;
+    // 
+    // if (selection == 1){
+    // priceCalculation(type);
+    // }
+    // 
+    //printf( >_< );
+   
+    
+    return 0;
+}
+
+
+//int priceCalculation(int a) {
+
+//switch (type)
+//{
+//case 1:
+//    sum += priceCaravan;
+//    caravanCount--;
+// printf("\nOwned sum %d. Caravans left %d", sum, caravanCount);
+ //   break;
+
+//case 2:
+//    sum += priceCamper;
+ //   camperCount--;
+ //   printf("\nOwned sum %d. Campers left %d", sum, camperCount);
+ //   break;
+//default:
+ //   printf("\nPlease select a valid input");
+
+ //   break;
+//}
+
+//    return sum;
+//}
