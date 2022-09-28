@@ -3,25 +3,15 @@
 #include <math.h>
 
 
-double tomatos = 4.5;
-double flour = 1.8;
-double yogurt = 0.5;
-double wafles = 0.6;
-double candy = 1.5;
-double lollypop = 0.15;
-double sum = 0;
-
-int purchaseCommand = 1; // determines if we continue shopping or not
-int choice = 0; // product choice
-double quantity = 0; //product quantity
-
-
-
 int main()
 {
+	int purchaseCommand = 1; // determines if we continue shopping or not
+	int choice = 0; // product choice
+	double quantity = 0; //product quantity
 
-
+	double tomatos = 4.5, flour = 1.8, yogurt = 0.5, wafles = 0.6, candy = 1.5, lollypop = 0.15;
 	
+	double sum = 0;
 
 	while (purchaseCommand == 1)
 	{
@@ -38,12 +28,16 @@ int main()
 		switch (choice)
 		{
 		case 1:
+
+			
 			scanf_s("%lf", &quantity);
 			sum += tomatos * quantity;
 			printf("\nYou purchased %.2f kg of Tomatos. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 
 		case 2:
+
+			
 			scanf_s("%lf", &quantity);
 			sum += flour * quantity;
 			printf("\nYou purchased %.2f kg of Flour. Current total price is: %.2f lv\n", quantity, sum);
