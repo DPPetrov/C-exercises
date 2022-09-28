@@ -1,0 +1,90 @@
+
+#include <stdio.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <climits>
+#include <math.h>
+#include <string.h>
+
+double tomatos = 4.5;
+double flour = 1.8;
+double yogurt = 0.5;
+double wafles = 0.6;
+double candy = 1.5;
+double lollypop = 0.15;
+double sum = 0;
+
+int purchaseCommand = 1;
+int choice = 0; // product choice
+double quantity = 0; //product quantity
+
+
+
+
+int main()
+{
+    while (purchaseCommand == 1) {
+        purchase(purchaseCommand);
+    }
+
+    printf("%.2f", sum);
+    
+    return 0;
+}
+
+
+
+
+
+int purchase(int a) {
+
+    printf("Please select a product\n");
+    printf("\n1. Tomatos\n2. Flour\n3. Yogurt\n4. Waffles\n5. Candy\n6. Lollypop\n");
+    printf("\nPlease select quantity ");
+    scanf_s("%lf", quantity);
+
+    switch (choice)
+    {
+    case 1:
+        scanf_s("%lf", &quantity);
+        sum += tomatos * quantity;
+        break;
+
+    case 2:
+        scanf_s("%lf", &quantity);
+        sum += flour * quantity;
+        break;
+    case 3:
+        scanf_s("%lf", &quantity);
+        sum += yogurt * quantity;
+        break;
+
+    case 4:
+        scanf_s("%lf", &quantity);
+        sum += wafles * quantity;
+        break;
+    case 5:
+        scanf_s("%lf", &quantity);
+        sum += candy * quantity;
+        break;
+    case 6:
+        scanf_s("%lf", &quantity);
+        sum += lollypop * quantity;
+        break;
+
+
+    default:
+        printf("Invalid product. This program will now selfdestruct!");
+        break;
+    }
+
+    printf("\nWould you like to make another purchase? (1) Yes, (0) No");
+    scanf_s("%d", &purchaseCommand);
+
+    if (purchaseCommand == 1) {
+        purchase(purchaseCommand);
+    }
+    else {
+        return sum;
+    }
+}
