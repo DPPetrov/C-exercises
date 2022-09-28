@@ -25,7 +25,7 @@ int main()
 
 	while (purchaseCommand == 1)
 	{
-		printf("Please select a product\n");
+		printf("\nPlease select a product\n");
 		printf("\n1. Tomatos\n2. Flour\n3. Yogurt\n4. Waffles\n5. Candy\n6. Lollypop\n");
 		printf("\nYour product of choice: ");
 
@@ -46,23 +46,28 @@ int main()
 		case 2:
 			scanf_s("%lf", &quantity);
 			sum += flour * quantity;
+			printf("\nYou purchased %.2f kg of Flour. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 3:
 			scanf_s("%lf", &quantity);
 			sum += yogurt * quantity;
+			printf("\nYou purchased %.1f jar(s) of Yogurt. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 
 		case 4:
 			scanf_s("%lf", &quantity);
 			sum += wafles * quantity;
+			printf("\nYou purchased %.1f piece(s) of Walffles. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 5:
 			scanf_s("%lf", &quantity);
 			sum += candy * quantity;
+			printf("\nYou purchased %.2f kg of Candy. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 6:
 			scanf_s("%lf", &quantity);
 			sum += lollypop * quantity;
+			printf("\nYou purchased %.1f Lollypop(s). Current total price is: %.2f lv\n", quantity, sum);
 			break;
 
 
