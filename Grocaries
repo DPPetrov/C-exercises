@@ -84,7 +84,7 @@ int main()
 
 		default:
 			red();
-			printf("\nInvalid product!!!!\n (>_<)\nThis program will now selfdestruct!!!!\n");
+			printf("\nInvalid product!!!!\n (>_<)(>_<) (>_<) (>_<) (>_<)\nThis program will now selfdestruct!!!!\n");
 			reset();
 			return;
 
@@ -104,3 +104,4 @@ int main()
 
 	return 0;
 }
+
