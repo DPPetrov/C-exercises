@@ -3,14 +3,27 @@
 #include <math.h>
 
 
+void red() {
+	printf("\033[1;31m");
+
+
+}
+
+void reset() {
+	printf("\033[0m");
+}
+
+
 int main()
 {
+	
+
 	int purchaseCommand = 1; // determines if we continue shopping or not
 	int choice = 0; // product choice
 	double quantity = 0; //product quantity
 
 	double tomatos = 4.5, flour = 1.8, yogurt = 0.5, wafles = 0.6, candy = 1.5, lollypop = 0.15;
-	
+
 	double sum = 0;
 
 	while (purchaseCommand == 1)
@@ -21,15 +34,15 @@ int main()
 
 		scanf_s("%d", &choice);
 
-		
-		
+
+
 
 
 		switch (choice)
 		{
 		case 1:
 			printf("\nPlease select quantity: ");
-			
+
 			scanf_s("%lf", &quantity);
 			sum += tomatos * quantity;
 			printf("\nYou purchased %.2f kg of Tomatos. Current total price is: %.2f lv\n", quantity, sum);
@@ -37,28 +50,32 @@ int main()
 
 		case 2:
 			printf("\nPlease select quantity: ");
-			
+
 			scanf_s("%lf", &quantity);
 			sum += flour * quantity;
 			printf("\nYou purchased %.2f kg of Flour. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 3:
+			printf("\nPlease select quantity: ");
 			scanf_s("%lf", &quantity);
 			sum += yogurt * quantity;
 			printf("\nYou purchased %.1f jar(s) of Yogurt. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 
 		case 4:
+			printf("\nPlease select quantity: ");
 			scanf_s("%lf", &quantity);
 			sum += wafles * quantity;
 			printf("\nYou purchased %.1f piece(s) of Walffles. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 5:
+			printf("\nPlease select quantity: ");
 			scanf_s("%lf", &quantity);
 			sum += candy * quantity;
 			printf("\nYou purchased %.2f kg of Candy. Current total price is: %.2f lv\n", quantity, sum);
 			break;
 		case 6:
+			printf("\nPlease select quantity: ");
 			scanf_s("%lf", &quantity);
 			sum += lollypop * quantity;
 			printf("\nYou purchased %.1f Lollypop(s). Current total price is: %.2f lv\n", quantity, sum);
@@ -66,9 +83,11 @@ int main()
 
 
 		default:
-			printf("Invalid product. This program will now selfdestruct!");
+			red();
+			printf("\nInvalid product!!!!\n (>_<)\nThis program will now selfdestruct!!!!\n");
+			reset();
 			return;
-			
+
 
 		}
 		if (purchaseCommand != 1 && purchaseCommand != 0) {
