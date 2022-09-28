@@ -40,6 +40,7 @@ int main()
 		case 1:
 			scanf_s("%lf", &quantity);
 			sum += tomatos * quantity;
+			printf("\nYou purchased %.2f kg of Tomatos for %.2f lv\n", quantity, sum);
 			break;
 
 		case 2:
