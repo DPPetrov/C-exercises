@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+
+	int  daysInYear = 365, daysInLongYear = 366, hoursInDay = 24, secondsInAnHour = 3600;
+		double result = daysInYear * hoursInDay * secondsInAnHour;
+		double result1 = daysInLongYear * hoursInDay * secondsInAnHour;
+
+	printf("Seconds in 365 days: %.2f", result);
+	printf("\nSeconds in 366 days: %.2f\n", result1);
+
+	
+}
