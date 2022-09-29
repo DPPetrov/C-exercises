@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+
+	char num = -127;
+	short num1 = 255;
+	int num2 = 63498;
+	long num3 = 4294967292;
+	long long num4 = -9000000000000775845;
+
+	printf("\n %d", num);
+	printf("\n %d", num1);
+	printf("\n %d", num2);
+	printf("\n %lld", num3);
+	printf("\n %lld", num4);
+
+}
