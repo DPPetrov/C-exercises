@@ -8,6 +8,6 @@ int main() {
 	long num3 = 4294967292;
 	long long num4 = -9000000000000775845;
 
-	printf("\n %d\n %d\n %d\n %lld\n%lld\n", num, num1, num3, num4, num2);
+	printf("\n %d\n %d\n %d\n %lld \n %lld \n", num, num1, num3, num4, num2);
 	
 }
